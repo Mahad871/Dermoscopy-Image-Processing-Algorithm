@@ -24,7 +24,7 @@ int main()
 	//cv::waitKey(0);
 
 	//namedWindow("First OpenCV Application", WINDOW_AUTOSIZE);
-	task2AndTask3();
+	task4();
 	/*Vec3b curr = img.at<Vec3b>(Point( 255, 255));
 	cout << curr.val[0] << curr.val[1] << curr.val[2];*/
 

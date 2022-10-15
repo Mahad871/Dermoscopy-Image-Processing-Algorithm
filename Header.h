@@ -13,8 +13,61 @@ using namespace std;
 
 
 
-void task1(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Segmented Outputs\\mIMD171.bmp") {
+void task3(string gndPath = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD063_lesion.bmp") {
+	string writePath = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\result\\a.bmp";
+cv: Mat img = cv::imread(writePath);
 
+
+	int tp = 0, fp = 0, fn = 0;
+
+	cv::Mat gnd = imread(gndPath);
+
+	for (int i = 0; i < gnd.rows; i++)
+	{
+
+		for (int j = 0; j < gnd.cols; j++)
+		{
+			int imgVal = img.at<Vec3b>(i, j).val[0], gndVal = gnd.at<Vec3b>(i, j).val[0];
+
+			if (imgVal == gndVal && imgVal == 255)
+			{
+				tp++;
+			}
+			if (imgVal == 255 && gndVal == 0)
+			{
+				fp++;
+
+
+			}
+			if (imgVal == 0 && gndVal == 255)
+			{
+				fn++;
+			}
+
+		}
+
+	}
+
+	float num = (2 * tp);
+	float den = (fn + (2 * tp) + fp);
+
+	float diceCoff = (num / den);
+
+	cout << "\n\n Dice COffencient: " << diceCoff;
+	//<< "   " << tp << "   " << fp << "   " << fn;
+
+
+
+	img = cv::imread(writePath);
+
+	cv::imshow("not First OpenCV Application", img);
+	cv::waitKey(0);
+	cv::destroyAllWindows();
+}
+
+void task1(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Segmented Outputs\\mIMD063.bmp") {
+
+	string gndPath = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD063_lesion.bmp";
 	cv::Mat img = cv::imread(path, 0);
 	namedWindow("First OpenCV Application", WINDOW_AUTOSIZE);
 
@@ -191,7 +244,14 @@ void task1(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester
 		}
 
 	}
+
 	imwrite("C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\result\\a.bmp", img);
+
+	task3("C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD063_lesion.bmp");
+	
+
+
+
 	cv::imshow("not First OpenCV Application", img);
 	cv::waitKey(0);
 	cv::destroyAllWindows();
@@ -200,12 +260,12 @@ void task1(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester
 }
 
 
-void task2AndTask3(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Original Images\\IMD002.bmp") {
+void task2AndTask3(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Original Images\\IMD063.bmp") {
 
 
 	//NOTE: Keep the FIle name for Original Images and Ground Trusths Same for correct Value of DICE COEFFICIENT // 
 
-	string gndPath = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD002_lesion.bmp";
+	string gndPath = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD063_lesion.bmp";
 
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////328//144////////////////////////////////////////////////////////////////////////////////////////////////
@@ -465,7 +525,9 @@ void task2AndTask3(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\
 
 }
 
-void task4(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Segmented Outputs\\mIMD024.bmp") {
+
+
+void task4(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Segmented Outputs\\mIMD063.bmp") {
 
 	cv::Mat img = cv::imread(path);
 
@@ -484,14 +546,14 @@ void task4(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester
 			prev = (img.at<Vec3b>(i, j - 1).val[0] + img.at<Vec3b>(i, j - 1).val[1] + img.at<Vec3b>(i, j - 1).val[2]) / 3;
 			next = (img.at<Vec3b>(i, j + 1).val[0] + img.at<Vec3b>(i, j + 1).val[1] + img.at<Vec3b>(i, j + 1).val[2]) / 3;
 
-			if (curr == 255 && prev == 0 ) {
+			if (curr == 255 && prev == 0) {
 
 				rlc.insert(j);
 
-				
+
 			}
-			if ( curr == 0 && prev == 255) {
-				rlc.insert(j-1);
+			if (curr == 0 && prev == 255) {
+				rlc.insert(j - 1);
 
 			}
 
