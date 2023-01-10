@@ -65,13 +65,14 @@ cv: Mat img = cv::imread(writePath);
 	cv::destroyAllWindows();
 }
 
-void task1(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Segmented Outputs\\mIMD063.bmp") {
+void task1(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Segmented Outputs\\mIMD043.bmp") {
 
-	string gndPath = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD063_lesion.bmp";
+	string gndPath = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD043_lesion.bmp";
 	cv::Mat img = cv::imread(path, 0);
 	namedWindow("First OpenCV Application", WINDOW_AUTOSIZE);
 
 	cv::imshow("First OpenCV Application", img);
+	
 
 
 	int lsz = 500000;
@@ -131,9 +132,6 @@ void task1(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester
 
 
 			}
-
-
-
 
 
 		}
@@ -247,9 +245,7 @@ void task1(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester
 
 	imwrite("C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\result\\a.bmp", img);
 
-	task3("C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD063_lesion.bmp");
-	
-
+	task3("C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD043_lesion.bmp");
 
 
 	cv::imshow("not First OpenCV Application", img);
@@ -260,12 +256,12 @@ void task1(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester
 }
 
 
-void task2AndTask3(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Original Images\\IMD063.bmp") {
+void task2AndTask3(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Original Images\\IMD043.bmp") {
 
 
 	//NOTE: Keep the FIle name for Original Images and Ground Trusths Same for correct Value of DICE COEFFICIENT // 
 
-	string gndPath = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD063_lesion.bmp";
+	string gndPath = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Ground Truths\\IMD043_lesion.bmp";
 
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////328//144////////////////////////////////////////////////////////////////////////////////////////////////
@@ -527,7 +523,7 @@ void task2AndTask3(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\
 
 
 
-void task4(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Segmented Outputs\\mIMD063.bmp") {
+void task4(string path = "C:\\Users\\msasd\\OneDrive\\Desktop\\Vs Code\\Semester 3\\Data st\\Assignment 1\\Assignment 1\\Segmented Outputs\\mIMD022.bmp") {
 
 	cv::Mat img = cv::imread(path);
 

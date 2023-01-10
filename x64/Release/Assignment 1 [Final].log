@@ -2,12 +2,7 @@
 C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(51,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(52,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(18,3): warning C4102: 'cv': unreferenced label
-C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(108,25): warning C4244: '=': conversion from '_Tp' to 'int', possible loss of data
-          with
-          [
-              _Tp=double
-          ]
-C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(109,23): warning C4244: '=': conversion from '_Tp' to 'int', possible loss of data
+C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(109,25): warning C4244: '=': conversion from '_Tp' to 'int', possible loss of data
           with
           [
               _Tp=double
@@ -22,11 +17,16 @@ C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\
           [
               _Tp=double
           ]
-C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(279,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(510,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(112,23): warning C4244: '=': conversion from '_Tp' to 'int', possible loss of data
+          with
+          [
+              _Tp=double
+          ]
+C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(280,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(511,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\msasd\OneDrive\Desktop\Vs Code\Semester 3\Data st\Assignment 1 [Final]\Header.h(512,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   Generating code
-  5 of 81 functions ( 6.2%) were compiled, the rest were copied from previous compilation.
+  15 of 100 functions (15.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
